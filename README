@@ -1,0 +1,14 @@
+ECE1387 Assignment 1 README file
+- developer:	Louis Chen
+- date:		Oct 11, 2018
+
+This folder contains two directories: assignment/ and assignment_parallel/
+and the assignment summary report. As described from their names, assignment/
+contains the single router program, and assignment_parallel/ contains the
+parallel router program.
+
+Please read my assignment summary report before launching any of the two
+programs for the best understanding of what the programs do.
+
+Hope you enjoy my router programs! :)
+

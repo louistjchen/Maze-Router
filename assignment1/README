@@ -1,0 +1,57 @@
+ECE1387 Assignment 1 README file (Single Router)
+- developer:	Louis Chen
+- date:		Oct 7, 2018
+
+Please read this file before compiling and launching the maze router.
+
+Please follow the steps below to achieve successful compilation.
+1)  Use <cd> to switch to the "a1" directory.
+2)  Type <make> or <make all> to compile the source code.
+    This will generate an executable called "MazeRouter-LouisChen".
+3)  Type <make clean> if wish to clean the project.
+
+Please follow the steps below to launch the application successfully.
+4)  Use <pwd> to make sure current directory is "a1".
+5)  To run the application, type <./MazeRouter-LouisChen "cct-file-path">.
+    The cct files are not attached in the folder. User can add flags after
+    the command to enable/disable graphics, debug mode, and optimization.
+    Available flags are shown as follows.
+
+	-displayMode=on		// turns on graphics display
+	-displayMode=off	// turns off graphics display
+	-debugMode=on		// turns on debug mode, which prints out
+				   connection paths and track map
+	-debugMode=off		// turns off debug mode
+	-multiLoadOpt=on	// enables multiple-load-pin optimization
+	-multiLoadOpt=off	// disables multiple-load-pin optimization
+
+    e.g. To turn on debug mode and turn off optimization
+	./MazeRouter-LouisChen -debugMode=on -multiLoadOpt=off
+	 To turn off graphics display
+	./MazeRouter-LouisChen -displayMode=off
+
+    Flags are processed regardless of the order in which they are entered.
+    If no flags are specified (with below command), by default display is on,
+    debug mode is off, and optimization is on.
+	./MazeRouter-LouisChen
+
+Please go to step 12) if display mode is turned off.
+6)  Now the program should pop up the display with correct grid and track width
+    sizing. To run the maze routing algorithm, please press <Proceed>.
+7)  Please observe the command line. If it says "Staring updateDisplay.", it
+    means router has solved all connection paths. Otherwise, wait for it.
+8)  Now user may press <Next Path> to display one path at a time, or press
+    <All Paths> to display all paths at once. Paths are colored differently
+    in the order they are displayed to give user a clear sight.
+9)  All logic blocks are colored in dark gray, and all combined switch/connection
+    blocks are colored in light gray.
+10) User can also press <Window> or <Zoom In> to see the logic block coordinates
+    and pin/track indices.
+11)  Press <Proceed> or <Exit> anytime user wishes to close the program.
+12) The command line should have shown the number of shuffles required to solve
+    the input circuit, the number of used/available tracks, the minimum number of
+    tracks left unoccupied in the most congested track channel. The command line
+    should have also shown the track/path info if the debug mode is enabled.
+
+Hope you had a great time exploring my maze routing program! :)
+

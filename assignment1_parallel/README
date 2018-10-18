@@ -1,0 +1,42 @@
+ECE1387 Assignment 1 README file (Parallel Router)
+- developer:	Louis Chen
+- date:		Oct 10, 2018
+
+Please read this file before compiling and launching the parallelization
+demonstration of the maze router.
+
+Be sure to read my assignment summary report Section III before assessing
+the program in order to get a full picture of what the program tries to do.
+
+This parallel router does not support graphics display.
+
+Please follow the steps below to achieve successful compilation.
+1)  Use <cd> to switch to the "a1_parallel" directory.
+2)  Type <make> or <make all> to compile the source code.
+    This will generate an executable called "MazeRouterParallel-LouisChen".
+3)  Type <make clean> if wish to clean the project.
+
+Please follow the steps below to launch the application successfully.
+4)  Use <pwd> to make sure current directory is "a1_parallel".
+5)  To run the application, type <./MazeRouterParallel-LouisChen "cct-file-path">.
+    The cct files are not attached in the folder.
+
+Please follow the steps to correctly interpret the results.
+6)  Now the program should show some results in the command line.
+    Results include timestamps of executing each of the 4 threads,
+    number of shuffles required to solve each threaded, and some
+    error messages showing any unroute path before each shuffle.
+
+    The 4 threads have different configuration parameters:
+      a) Thread 1: Optimization off, forward traversal
+      b) Thread 2: Optimization off, backward traversal
+      c) Thread 3: Optimization on, forward traversal
+      d) Thread 4: Optimization on, backward traversal
+
+    Please note that the order in which the [RESULT...] messages
+    appear does not reflect on the thread numbering. Instead it
+    reflects on the order in which the threaded routers finish
+    their routing tasks.
+
+Hope you had a great time exploring my parallel router program! :)
+
